@@ -44,7 +44,7 @@ public class Idade {
 				data="Pessoas com menos de 18 ainda não tem data marcada para se vacinarem";
 			}
 		}
-		if(estado.equals("MG")) {
+		else if(estado.equals("MG")) {
 			if(idade>=55) {
 				data="Pessoas com mais de 55 anos já podem se vacinar em Minas Gerais\n";
 			}
@@ -64,7 +64,7 @@ public class Idade {
 				data="Pessoas com menos de 18 ainda não tem data marcada para se vacinarem";
 			}
 		}
-		if(estado.equals("BH")) {
+		else if(estado.equals("BH")) {
 			if(idade>=55) {
 				data="Pessoas com mais de 55 anos já podem se vacinar em Belo Horizonte\n";
 			}
@@ -84,7 +84,7 @@ public class Idade {
 				data="Pessoas com menos de 18 ainda não tem data marcada para se vacinarem";
 			}
 		}
-		if(estado.equals("RJ")) {
+		else if(estado.equals("RJ")) {
 			if(idade>=51) {
 				data="Pessoas com mais de 51 anos já podem se vacinar no estado no Rio de Janeiro\n";
 			}
@@ -103,6 +103,9 @@ public class Idade {
 			else {
 				data="Pessoas com menos de 18 ainda não tem data marcada para se vacinarem";
 			}
+		}
+		else {
+			data="Estado foi digitado incorretamente";
 		}
 		return data;
 	}

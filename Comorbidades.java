@@ -1,14 +1,7 @@
 
 public class Comorbidades {
-	private String comorbidade;
-	public Comorbidades(String c) {
-		comorbidade=c;
-	}
-	public void setComorbidade(String c) {
-		comorbidade=c;
-	}
-	public String getComorbidade() {
-		return comorbidade;
+	public Comorbidades() {
+		
 	}
 	
 	@Override

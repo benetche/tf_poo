@@ -33,6 +33,9 @@ public class TipoVacina {
 			dados+="Com uma dose essa vacina demonstrou eficácia de 66% contra os casos moderados e graves da Covid-19, eficácia de 85,4% apenas contra os casos graves"
 					+ "e 100% de proteção contra hospitalização e morte por Covid depois de 28 dias da aplicação\n";			
 		}
+		else {
+			dados="Essa vacina não está sendo aplicada no Brasil";
+		}
 		return dados;
 	}
 }
