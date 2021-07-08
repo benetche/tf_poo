@@ -1,3 +1,4 @@
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import java.awt.event.ActionEvent;
@@ -18,14 +19,16 @@ public class InfoGeralGUI extends JFrame implements ActionListener {
 		InformacoesGerais ig=new InformacoesGerais();
 		
 		JPanel jp = (JPanel) this.getContentPane();
-		jp.setLayout(new GridLayout(3,1));
-		label = new JLabel(ig+"");
+		jp.setLayout(new GridLayout(2,1));
+		label = new JLabel("<html>"+ig+"<html>");
 		
 		buttonVoltarInicio = new JButton("Inicio");
 		buttonVoltarInicio.setActionCommand("inicio");
 		
 		jp.add(label);		
-		jp.add(buttonVoltarInicio);
+		JPanel jp2=new JPanel(new FlowLayout());	
+		jp2.add(buttonVoltarInicio);
+		jp.add(jp2);
 		
 		buttonVoltarInicio.addActionListener(this);
 	}

@@ -23,7 +23,7 @@ public class IdadeGUI extends JFrame implements ActionListener {
 		super("Data de vacinação");
 		
 		jp = (JPanel) this.getContentPane();
-		jp.setLayout(new GridLayout(3,1));
+		jp.setLayout(new GridLayout(2,1));
 		label = new JLabel("Entre seu estado e idade para achar sua data de vacinação");
 		siglaEstado=new JTextField("Sigla  do Estado");
 		idade=new JTextField("Idade");
@@ -59,8 +59,9 @@ public class IdadeGUI extends JFrame implements ActionListener {
 			jp.remove(jp2);
 			
 			
-			
-			jp.add(buttonInicio);
+			jp2=new JPanel(new FlowLayout());
+			jp2.add(buttonInicio);
+			jp.add(jp2);
 			
 		}
 		else if ("inicio".equals(e.getActionCommand())) {

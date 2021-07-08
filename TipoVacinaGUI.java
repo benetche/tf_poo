@@ -22,7 +22,7 @@ public class TipoVacinaGUI extends JFrame implements ActionListener {
 		super("Dados sobre um tipo de vacina");
 		
 		jp = (JPanel) this.getContentPane();
-		jp.setLayout(new GridLayout(3,1));
+		jp.setLayout(new GridLayout(2,1));
 		label = new JLabel("Entre o tipo de vacina que você que buscar");
 		nomeVacina=new JTextField("Tipo de vacina");
 		
@@ -51,7 +51,9 @@ public class TipoVacinaGUI extends JFrame implements ActionListener {
 			TipoVacina tv=new TipoVacina(nome);
 			label.setText(tv+"");
 			
-			jp.add(buttonInicio);
+			jp2=new JPanel(new FlowLayout());
+			jp2.add(buttonInicio);
+			jp.add(jp2);
 			
 		}
 		else if ("inicio".equals(e.getActionCommand())) {
