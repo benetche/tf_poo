@@ -39,21 +39,4 @@ public class InfoGeralGUI extends JFrame implements ActionListener {
 			dispose();
 		}
 	}
-			label.setText(s);
-		}
-		else if ("limpa".equals(e.getActionCommand())) {
-			nome.setText("");
-			String s = WELLCOME;
-			label.setText(s);
-		}
-	}
-	
-	public static void main(String[] args) {
-		CovidAppGUI frame=new CovidAppGUI();
-		frame.setSize(400, 200);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-
-	}
-*/
 }
