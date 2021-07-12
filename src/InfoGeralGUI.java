@@ -39,45 +39,6 @@ public class InfoGeralGUI extends JFrame implements ActionListener {
 			dispose();
 		}
 	}
-
-/*	
-	private static final long serialVersionUID = 1L;
-	private JButton buttonOK;
-	JTextField nome;
-	String WELLCOME="Welcome";
-	JLabel label;
-
-	public CovidAppGUI() {
-		super("Dados Vacinação Covid");
-		
-		JPanel jp = (JPanel) this.getContentPane();
-		label = new JLabel("Hello Interface");
-		jp.setLayout(new GridLayout(3,1));
-		label = new JLabel(WELLCOME);
-		nome=new JTextField();
-		
-		buttonOK = new JButton("Confirma");
-		JButton buttonLimpa = new JButton("Limpa");
-		buttonOK.setActionCommand("confirma");
-		buttonLimpa.setActionCommand("limpa");
-		
-		jp.add(label);
-		jp.add(nome);
-		
-		JPanel jp2=new JPanel(new FlowLayout());
-		jp2.add(buttonOK);
-		jp2.add(buttonLimpa);
-		jp.add(jp2);		
-		
-		buttonOK.addActionListener(this);
-		buttonLimpa.addActionListener(this);
-	}
-	
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if ("confirma".equals(e.getActionCommand())) {
-			String s = nome.getText();
-			s = WELLCOME + " " + s;
 			label.setText(s);
 		}
 		else if ("limpa".equals(e.getActionCommand())) {
