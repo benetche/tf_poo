@@ -47,10 +47,9 @@ public class TipoVacinaGUI extends JFrame implements ActionListener {
 		if ("avancar".equals(e.getActionCommand())) {
 			String nome=nomeVacina.getText();
 			jp.remove(jp2);
-			
 			TipoVacina tv=new TipoVacina(nome);
-			label.setText(tv+"");
-			
+			label.setText("<html>"+tv+"<html>");
+			jp.add(label);
 			jp2=new JPanel(new FlowLayout());
 			jp2.add(buttonInicio);
 			jp.add(jp2);
