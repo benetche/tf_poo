@@ -23,7 +23,7 @@ public class CovidAppGUI extends JFrame implements ActionListener {
 		super("Dados Vacinação Covid");
 
 		JPanel jp = (JPanel) this.getContentPane();
-		jp.setLayout(new GridLayout(3,1));
+		jp.setLayout(new GridLayout(2,1));
 		label = new JLabel(textoInicial);
 		
 		buttonInfoGeral = new JButton("Informações Gerais");
@@ -53,25 +53,25 @@ public class CovidAppGUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if ("info".equals(e.getActionCommand())) {
 			InfoGeralGUI newFrame=new InfoGeralGUI();
-			newFrame.setSize(400, 200);
+			newFrame.setSize(1200, 500);
 			newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			newFrame.setVisible(true);
 		}
 		else if ("data".equals(e.getActionCommand())) {
 			IdadeGUI newFrame=new IdadeGUI();
-			newFrame.setSize(400, 200);
+			newFrame.setSize(800, 400);
 			newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			newFrame.setVisible(true);
 		}
 		else if ("comorbidade".equals(e.getActionCommand())) {
 			ComorbidadesGUI newFrame=new ComorbidadesGUI();
-			newFrame.setSize(400, 200);
+			newFrame.setSize(800, 400);
 			newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			newFrame.setVisible(true);
 		}
 		else if ("tipo".equals(e.getActionCommand())) {
 			TipoVacinaGUI newFrame=new TipoVacinaGUI();
-			newFrame.setSize(400, 200);
+			newFrame.setSize(800, 400);
 			newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			newFrame.setVisible(true);
 		}
@@ -79,7 +79,7 @@ public class CovidAppGUI extends JFrame implements ActionListener {
 	
 	public static void main(String[] args) {
 		frame=new CovidAppGUI();
-		frame.setSize(400, 200);
+		frame.setSize(800, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 

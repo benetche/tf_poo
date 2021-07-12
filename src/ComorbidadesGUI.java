@@ -1,3 +1,4 @@
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,14 +18,16 @@ public class ComorbidadesGUI extends JFrame implements ActionListener {
 		Comorbidades c= new Comorbidades();
 		
 		JPanel jp = (JPanel) this.getContentPane();
-		jp.setLayout(new GridLayout(3,1));
-		label = new JLabel(c+"");
+		jp.setLayout(new GridLayout(2,1));
+		label = new JLabel("<html>"+c+"<html>");
 		
 		buttonVoltarInicio = new JButton("Inicio");
 		buttonVoltarInicio.setActionCommand("inicio");
 		
-		jp.add(label);		
-		jp.add(buttonVoltarInicio);
+		jp.add(label);	
+		JPanel jp2=new JPanel(new FlowLayout());	
+		jp2.add(buttonVoltarInicio);
+		jp.add(jp2);
 		
 		buttonVoltarInicio.addActionListener(this);
 	}
