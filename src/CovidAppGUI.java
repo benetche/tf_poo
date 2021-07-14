@@ -71,7 +71,7 @@ public class CovidAppGUI extends JFrame implements ActionListener {
 		}
 		else if ("tipo".equals(e.getActionCommand())) {
 			TipoVacinaGUI newFrame=new TipoVacinaGUI();
-			newFrame.setSize(800, 400);
+			newFrame.setSize(1000, 400);
 			newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			newFrame.setVisible(true);
 		}
