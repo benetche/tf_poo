@@ -29,7 +29,7 @@ public class Idade {
 	}
 
 	private static String[][] lerLinhasCSV() {
-		String[][] linhas = new String[44][16];
+		String[][] linhas = new String[45][16];
 		String linhaAtual = "";
 		try {
 			for (int i = 0; (linhaAtual = br.readLine()) != null; i++)
