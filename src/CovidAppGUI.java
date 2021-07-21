@@ -1,13 +1,11 @@
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class CovidAppGUI extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
@@ -18,31 +16,50 @@ public class CovidAppGUI extends JFrame implements ActionListener {
 	private JButton buttonDataVacinacao;
 	String textoInicial="Escolha o que buscar";
 	JLabel label;
-
+	
 	public CovidAppGUI() {
-		super("Dados Vacinação Covid");
+		super("Dados Covid");
 
 		JPanel jp = (JPanel) this.getContentPane();
-		jp.setLayout(new GridLayout(2,1));
-		label = new JLabel(textoInicial);
 		
-		buttonInfoGeral = new JButton("Informações Gerais");
+		jp.setBackground(Color.white);
+		buttonInfoGeral = new JButton("Geral");
+		buttonInfoGeral.setFont(new Font("Tahoma", Font.BOLD, 14));
+		buttonInfoGeral.setFocusPainted(false);
+		buttonInfoGeral.setBackground(new Color(40, 167, 69));
+		buttonInfoGeral.setForeground(Color.WHITE);
+		
 		buttonTipoVacina = new JButton("Tipo de Vacina");
+		buttonTipoVacina.setFont(new Font("Tahoma", Font.BOLD, 14));
+		buttonTipoVacina.setFocusPainted(false);
+		buttonTipoVacina.setBackground(new Color(40, 167, 69));
+		buttonTipoVacina.setForeground(Color.WHITE);
+		
 		buttonComorbidade = new JButton("Comorbidades");
-		buttonDataVacinacao = new JButton("Data de vacinação");
+		buttonComorbidade.setFont(new Font("Tahoma", Font.BOLD, 14));
+		buttonComorbidade.setFocusPainted(false);
+		buttonComorbidade.setBackground(new Color(40, 167, 69));
+		buttonComorbidade.setForeground(Color.WHITE);
+		
+		buttonDataVacinacao = new JButton("Quando posso ser vacinado?");
+		buttonDataVacinacao.setFont(new Font("Tahoma", Font.BOLD, 14));
+		buttonDataVacinacao.setFocusPainted(false);
+		buttonDataVacinacao.setBackground(new Color(40, 167, 69));
+		buttonDataVacinacao.setForeground(Color.WHITE);
+		
 		buttonInfoGeral.setActionCommand("info");
 		buttonTipoVacina.setActionCommand("tipo");
 		buttonComorbidade.setActionCommand("comorbidade");
 		buttonDataVacinacao.setActionCommand("data");
-		
-		jp.add(label);		
+			
 		JPanel jp2=new JPanel(new FlowLayout());
 		jp2.add(buttonInfoGeral);
 		jp2.add(buttonTipoVacina);
 		jp2.add(buttonComorbidade);
 		jp2.add(buttonDataVacinacao);
 		jp.add(jp2);		
-		
+		jp2.setBackground(Color.white);
+	
 		buttonInfoGeral.addActionListener(this);
 		buttonTipoVacina.addActionListener(this);
 		buttonComorbidade.addActionListener(this);
@@ -86,3 +103,5 @@ public class CovidAppGUI extends JFrame implements ActionListener {
 	}
 
 }
+
+
