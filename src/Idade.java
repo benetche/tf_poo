@@ -15,7 +15,7 @@ public class Idade {
 
 	public Idade(int i, String e) {
 		idade=i;
-		estado=e;
+		estado=e.toUpperCase();
 	}
 
 	private static BufferedReader criarBufferedReader() {
