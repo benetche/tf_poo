@@ -21,7 +21,6 @@ public class Idade {
 	private static BufferedReader criarBufferedReader() {
 		BufferedReader br = null;
 		java.net.URL Url = Idade.class.getResource("/resources/datas.csv");
-		//InputStream fis = Idade.class.getResourceAsStream("/data.csv");
 		try {
 			br = new BufferedReader(new InputStreamReader(Url.openStream()));
 		} catch (FileNotFoundException e) {
