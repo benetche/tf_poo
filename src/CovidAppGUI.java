@@ -13,7 +13,8 @@ public class CovidAppGUI extends JFrame implements ActionListener {
 	String textoInicial="Escolha o que buscar";
 	JLabel label;
 	
-	ImageIcon covid = new ImageIcon("covid.png");
+	java.net.URL imgURL = this.getClass().getResource("resources/covid.png");
+	ImageIcon covid = new ImageIcon(imgURL);
 	
 	public CovidAppGUI() {
 		super("Dados Covid");
